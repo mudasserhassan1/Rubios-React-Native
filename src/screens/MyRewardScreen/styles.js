@@ -1,0 +1,620 @@
+import {Platform, StyleSheet} from 'react-native';
+import {appStyles, colors} from '../../theme';
+import {
+  getMScale,
+  getScale,
+  getVerticalScale,
+  SCREEN_HEIGHT,
+  SCREEN_WIDTH,
+} from '../../theme/metrics';
+
+const styles = StyleSheet.create({
+  screen: {...appStyles.screen, flexGrow: 1, flex: 1},
+  scrollContainer: {...appStyles.screen, flexGrow: 1},
+  subTitle: {
+    textTransform: 'uppercase',
+    color: colors.primary,
+    marginVertical: getMScale(10),
+  },
+  redeemPoints: {
+    marginVertical: getMScale(6),
+  },
+  points: {
+    color: colors.textColorDark,
+    fontSize: 22,
+    fontWeight: 'bold',
+    marginTop: getMScale(3),
+  },
+  point2: {
+    color: colors.primary,
+  },
+  pointText: {
+    fontSize: 13,
+    color: colors.textColorDark,
+    fontWeight: 'bold',
+  },
+  pointsContainer: {
+    padding: getMScale(15),
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    elevation: 3,
+    borderWidth: getMScale(0.5),
+    borderColor: colors.primary,
+    backgroundColor: colors.lightGray,
+  },
+  headingContainer: {
+    flexDirection: 'row',
+    marginTop: getMScale(20),
+    alignItems: 'center',
+  },
+  heading: {
+    textTransform: 'uppercase',
+    marginRight: 5,
+    marginTop: getMScale(5),
+    color: colors.primary,
+    fontWeight: 'bold',
+    fontSize: 20,
+  },
+
+  headingDisable: {
+    opacity: 0.6,
+  },
+
+  itemContainer: {
+    flexDirection: 'row',
+    backgroundColor: colors.white,
+    width: '95%',
+    // minHeight: getVerticalScale(118),
+    // height: 'auto',
+    alignSelf: 'center',
+    marginVertical: 5,
+    borderRadius: getMScale(16),
+    padding: getMScale(10),
+    ...Platform.select({
+      ios: {
+        shadowColor: 'rgba(162, 162, 162, 0.3)',
+        shadowOffset: {width: 0, height: 0},
+        shadowOpacity: 0.7,
+        shadowRadius: 10,
+      },
+      android: {
+        elevation: 3,
+      },
+    }),
+  },
+  challengeItemContainer: {
+    flexDirection: 'row',
+    backgroundColor: colors.white,
+    width: '95%',
+    alignSelf: 'center',
+    marginVertical: 16,
+    borderRadius: getMScale(16),
+    ...Platform.select({
+      ios: {
+        shadowColor: 'rgba(162, 162, 162, 0.3)',
+        shadowOffset: {width: 0, height: 0},
+        shadowOpacity: 0.7,
+        shadowRadius: 10,
+      },
+      android: {
+        elevation: 3,
+      },
+    }),
+  },
+
+  image: {
+    height: getMScale(86),
+    width: getMScale(86),
+    padding: getMScale(16),
+    borderRadius: getMScale(16),
+    ...Platform.select({
+      ios: {
+        shadowColor: 'rgba(162, 162, 162, 0.3)',
+        shadowOffset: {width: 0, height: 0},
+        shadowOpacity: 0.7,
+        shadowRadius: 10,
+      },
+      android: {
+        elevation: 3,
+      },
+    }),
+  },
+  rewardPoints: {
+    marginTop: getMScale(10),
+    fontSize: 14,
+    fontWeight: 'bold',
+    textTransform: 'uppercase',
+    color: colors.black,
+  },
+  expires: {
+    marginTop: getMScale(5),
+    fontSize: 12,
+    fontWeight: 'bold',
+    color: colors.black,
+  },
+  title: {
+    maxWidth: getMScale(240),
+  },
+  subDes: {
+    marginTop: getMScale(3),
+    marginBottom: getMScale(5),
+    fontSize: 15,
+    fontWeight: '400',
+    color: colors.black,
+  },
+
+  subDesDisable: {
+    opacity: 0.4,
+  },
+  apply: {
+    marginTop: getMScale(10),
+    fontSize: 11,
+    width: '100%',
+    fontWeight: 'bold',
+    textTransform: 'uppercase',
+    color: colors.blue1,
+  },
+  applyDisable: {
+    color: colors.grey500,
+  },
+  loaderContainer: {
+    padding: 20,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  emptyTextContainer: {
+    color: colors.black,
+    fontWeight: 'bold',
+    fontSize: 13,
+    padding: getMScale(15),
+  },
+  divider: {
+    marginVertical: getMScale(15),
+  },
+  itemMapperView: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '95%',
+  },
+
+  labelStyle: {textTransform: 'none', fontSize: getScale(16), fontWeight: 'normal'},
+  barStyle: {
+    height: getMScale(45),
+    borderBottomColor: colors.primary_23,
+    borderBottomWidth: 0.1,
+    elevation: 0,
+    backgroundColor: colors.transparent,
+    marginHorizontal: getMScale(16),
+  },
+  indicatorStyle: {
+    alignSelf: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: colors.primary,
+    height: 3,
+  },
+  container: {
+    flex: 1,
+    backgroundColor: colors.white,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  textStyle: {
+    color: colors.black,
+  },
+  backgroundParent: {
+    width: SCREEN_WIDTH,
+    height: SCREEN_HEIGHT,
+    flex: 1,
+    flexGrow: 1,
+    resizeMode: 'stretch',
+  },
+  horizontalLine: {
+    borderBottomColor: 'grey',
+    borderBottomWidth: 0.5,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.27,
+    shadowRadius: 4.65,
+    elevation: 6,
+  },
+  horizontalLine_: {
+    greyHorizontalLineStyle: {
+      height: 1,
+      backgroundColor: colors.black,
+      marginVertical: getVerticalScale(16),
+      marginHorizontal: getMScale(15),
+    },
+  },
+  scanInStoreBtn: {
+    backgroundColor: colors.transparent,
+    borderWidth: 2,
+    borderColor: colors.secondaryColor,
+    width: getMScale(132),
+    height: getMScale(24),
+  },
+  orderBtn: {
+    minWidth: getMScale(85),
+    minHeight: getMScale(24),
+    marginStart: getMScale(20),
+  },
+  itemBottomView: {
+    backgroundColor: colors.white,
+    minHeight: getMScale(24),
+    minWidth: getMScale(152),
+    paddingHorizontal: 10,
+    width: 'auto',
+    borderRadius: 30,
+    borderWidth: 2,
+    borderColor: colors.secondary,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  orderBtnView: {
+    backgroundColor: colors.secondaryColor,
+    minHeight: getMScale(24),
+    minWidth: getMScale(85),
+    borderRadius: 30,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  orderChallengeBtnView: {
+    backgroundColor: colors.secondaryColor,
+    minHeight: getMScale(24),
+    minWidth: getMScale(85),
+    borderRadius: 30,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  challengeImage: {
+    height: getMScale(132),
+    width: getMScale(132),
+    borderTopLeftRadius: getMScale(16),
+    borderBottomLeftRadius: getMScale(16),
+  },
+  challengeTitle: {
+    maxWidth: getMScale(210),
+    marginTop: getMScale(15),
+  },
+  ChallengesParent: {
+    flex: 1,
+    backgroundColor: colors.white,
+  },
+  bottomViewParent: {
+    height: getMScale(80),
+    width: '100%',
+    marginTop: getMScale(16),
+    justifyContent: 'center',
+  },
+  imageStyle: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  aboutTextStyle: {
+    marginStart: getMScale(50),
+    lineHeight: 24,
+    marginTop: getMScale(5),
+  },
+  challengeDetailheader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '100%',
+    alignSelf: 'center',
+    height: getMScale(60),
+    backgroundColor: '#F4F4F4',
+    paddingHorizontal: getMScale(16),
+    overflow: 'hidden',
+    borderTopLeftRadius: 16,
+    borderTopRightRadius: 16,
+  },
+  headerView: {
+    height: getVerticalScale(60),
+    width: '100%',
+    borderTopEndRadius: getScale(20),
+    borderTopStartRadius: getScale(20),
+    backgroundColor: '#F6F6F6',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  nullHeaderIcon: {
+    width: 35,
+    height: 35,
+    backgroundColor: colors.transparent,
+    borderRadius: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  headerIconBackground: {
+    width: 35,
+    height: 35,
+    backgroundColor: colors.white,
+    borderRadius: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  headerCrossIcon: {
+    width: 15,
+    height: 14,
+  },
+  rewardsProgressContainer: {
+    width: '91%',
+    alignSelf: 'center',
+    height: 4,
+    backgroundColor: '#82959E',
+    borderRadius: 5,
+    justifyContent: 'center',
+    marginTop: 40,
+  },
+  dotsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    position: 'absolute',
+    width: '100%',
+  },
+  activeLineAndStarContainer: {
+    height: '100%',
+    alignItems: 'flex-end',
+    justifyContent: 'center',
+    backgroundColor: colors.primary,
+    position: 'absolute',
+    borderRadius: 5,
+  },
+  star: {end: -15, zIndex: 22, top: -1},
+  orderNowBtn: {width: '75%', marginTop: getVerticalScale(40), alignSelf: 'center'},
+  btnView: {
+    justifyContent: 'center',
+    alignItems:'center',
+    flexDirection: 'row',
+    position: 'absolute',
+    bottom: 10,
+    left: 0,
+  },
+  detailsWrapper: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: getMScale(20),
+    marginHorizontal: getMScale(16),
+  },
+  statusTextStyle: {
+    marginTop: getMScale(30),
+    fontStyle: 'italic',
+    lineHeight: 16,
+    color: colors.primary,
+    fontSize: getMScale(12),
+    marginHorizontal: getMScale(16),
+  },
+  descriptionTextStyle: {
+    marginTop: getMScale(30),
+    lineHeight: 16,
+    marginHorizontal: getMScale(16),
+  },
+  emptyChallengeView: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    // flex: 1,
+    paddingVertical: getMScale(40),
+  },
+  emtyTextStyle: {
+    textAlign: 'center',
+    marginHorizontal: getMScale(70),
+    lineHeight: 16,
+    marginTop: getMScale(16),
+  },
+  emptyChallengeIcon_: {
+    height: getMScale(66),
+    width: getMScale(66),
+  },
+  currentPointsWrapper: {
+    paddingTop: getMScale(8),
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: colors.white,
+  },
+  greyLineStyle: {
+    height: 1,
+    backgroundColor: colors.primary_23,
+    width: '28%',
+    marginTop: getMScale(7),
+  },
+  greyHorizontalLineStyle: {
+    height: 1,
+    backgroundColor: colors.greyLine,
+    marginVertical: getVerticalScale(16),
+    marginHorizontal: getMScale(16),
+  },
+  rewardsPointHeaderWrapper: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginHorizontal: getMScale(16),
+  },
+  actibeTabBar: {
+    color: colors.primary,
+    fontWeight: 'bold',
+  },
+  timeLineWrapper: {
+    flex: 1,
+    backgroundColor: 'white',
+    marginHorizontal: getMScale(16),
+  },
+  dateStyle: {
+    textAlign: 'center',
+    backgroundColor: colors.secondary,
+    color: 'white',
+    padding: 5,
+    borderRadius: 13,
+  },
+  descriptionStyle: {
+    color: colors.primary,
+    fontSize: 12,
+    lineHeight: 16,
+    letterSpacing: 0.15,
+  },
+  imageBackground: {
+    height: getMScale(200),
+    width: SCREEN_WIDTH,
+    justifyContent: 'center',
+    alignItems: 'center',
+    ...Platform.select({
+      ios: {
+        shadowColor: 'rgba(162, 162, 162, 0.3)',
+        shadowOffset: {width: 0, height: 0},
+        shadowOpacity: 0.9,
+        shadowRadius: 10,
+      },
+      android: {
+        elevation: 3,
+      },
+    }),
+  },
+  topImage: {
+    height: getMScale(150),
+    width: getMScale(150),
+    borderRadius: getMScale(16),
+  },
+  qrParent: {
+    height: SCREEN_HEIGHT - 200,
+    // flex: 1,
+    backgroundColor: colors.white,
+  },
+  hint: {
+    color: colors.text,
+    fontSize: 18,
+    fontWeight: '400',
+  },
+  code: {
+    color: colors.primary,
+    marginTop: getMScale(15),
+    alignSelf: 'center',
+  },
+  qrcodeContainer: {
+    backgroundColor: colors.white,
+    padding: 20,
+    elevation: 3,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: getMScale(25),
+    alignSelf: 'center',
+    borderRadius: getMScale(16),
+    ...Platform.select({
+      ios: {
+        shadowColor: 'rgba(162, 162, 162, 0.3)',
+        shadowOffset: {width: 0, height: 0},
+        shadowOpacity: 0.9,
+        shadowRadius: 10,
+      },
+      android: {
+        elevation: 3,
+      },
+    }),
+  },
+  timeSlotHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '100%',
+    alignSelf: 'center',
+    height: getMScale(60),
+    backgroundColor: '#F4F4F4',
+    paddingHorizontal: getMScale(16),
+    overflow: 'hidden',
+    borderTopLeftRadius: 16,
+    borderTopRightRadius: 16,
+  },
+  flatListContainer: {
+    flexGrow: 1,
+    paddingVertical: 12,
+    backgroundColor: 'transparent'
+  },
+  offersItemContainer: {
+    width: getMScale(298),
+    marginRight: getMScale(16),
+    borderRadius: getMScale(8),
+    backgroundColor: colors.white,
+    ...Platform.select({
+      ios: {
+        shadowColor: 'rgba(162, 162, 162, 0.3)',
+        shadowOffset: {width: 0, height: 0},
+        shadowOpacity: 0.7,
+        shadowRadius: 10,
+      },
+      android: {
+        elevation: 3,
+      },
+    }),
+  },
+  offersImage: {
+    width: '100%',
+    height: getMScale(140),
+    borderTopLeftRadius: 8,
+    borderTopRightRadius: 8,
+  },
+  expiryDate: {
+    position: 'absolute',
+    top: 110,
+    right: 8,
+    color: '#fff',
+    backgroundColor: colors.white,
+    paddingVertical: getMScale(4),
+    paddingHorizontal: getMScale(8),
+    borderRadius: getMScale(6),
+    fontStyle: 'italic',
+    letterSpacing: 0.15,
+    lineHeight: 17,
+  },
+  text: {
+    marginVertical: 8,
+  },
+  bottomViewWrapper: {
+    minHeight: getMScale(125),
+    marginHorizontal: getMScale(16),
+    marginVertical: getMScale(10),
+  },
+  rewardsInfoWrapper: {
+    height: getMScale(140),
+    marginTop: getMScale(30),
+    marginHorizontal: getMScale(16),
+  },
+  header: {
+    height: getMScale(510),
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'absolute',
+    // top: getMScale(110),
+    // backgroundColor: '#40FFC4',
+  },
+  label: {fontSize: 16, color: '#222'},
+  // tab: {
+  //   elevation: 0,
+  //   shadowOpacity: 0,
+  //   backgroundColor: colors.transparent,
+  //   height: 48,
+  // },
+  indicator: {backgroundColor: colors.primary, marginHorizontal: getMScale(16)},
+
+  tabBar: {
+    flexDirection: 'row',
+    backgroundColor: 'white', // Adjust as needed
+  },
+  tab: {
+    flex: 1,
+    alignItems: 'center',
+    paddingVertical: 12,
+  },
+  activeTab: {
+    fontWeight: 'bold', // Make the label bold for the active tab
+  },
+  tabLabel: {
+    fontSize: 16, // Adjust as needed
+  },
+});
+
+export default styles;

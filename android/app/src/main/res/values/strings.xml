@@ -1,0 +1,5 @@
+<resources>
+<!--    <string name="app_name" translatable="false">Rubios</string>-->
+    <string name="facebook_app_id" translatable="false">380212609388497</string>
+    <string name="facebook_client_token" translatable="false">abe2c58e16a0b7313b7b69358137d786</string>
+</resources>

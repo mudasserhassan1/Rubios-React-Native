@@ -1,0 +1,105 @@
+{
+  "project_info": {
+    "project_number": "253781130448",
+    "firebase_url": "https://rubios-222907.firebaseio.com",
+    "project_id": "rubios-222907",
+    "storage_bucket": "rubios-222907.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:253781130448:android:2d30ac588d9a1d0e",
+        "android_client_info": {
+          "package_name": "com.rubios.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "253781130448-cui6rodqmn7eqs7mj7v69dl3u7mubl0d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rubios.app",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "253781130448-di1uegjc1t0769r465br3qevot2bi0cl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDV4kAbsQqF1dpN-UW1lc3KVzFAQa8Hs_8"
+        },
+        {
+          "current_key": "AIzaSyDyH8JEOdU-T1yzt368_Jg_7NoMTt4RyL4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "100876367497950492774",
+              "client_type": 3
+            },
+            {
+              "client_id": "253781130448-tdvlgb6lb0gka9hghlekj31q2ra482i0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.rubios.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:253781130448:android:f44bc5c4887004487af2d5",
+        "android_client_info": {
+          "package_name": "com.rubios.app.staging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "253781130448-mkip0lmens70i2akncpfk6kivh98ligl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rubios.app.staging",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "253781130448-di1uegjc1t0769r465br3qevot2bi0cl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDV4kAbsQqF1dpN-UW1lc3KVzFAQa8Hs_8"
+        },
+        {
+          "current_key": "AIzaSyDyH8JEOdU-T1yzt368_Jg_7NoMTt4RyL4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "100876367497950492774",
+              "client_type": 3
+            },
+            {
+              "client_id": "253781130448-tdvlgb6lb0gka9hghlekj31q2ra482i0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.rubios.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

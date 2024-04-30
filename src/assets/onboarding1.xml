@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Aps>
+	<Group>
+		<Page Width="292" Height="633" PaperTray="0">
+			<Canvas>
+				<Canvas>
+					<Clip>
+						<Path FillMode="Winding">
+							<PathFigure IsClosed="True">
+								<PolyLine LineColor="#FF000000">
+									<Point X="0" Y="633" />
+									<Point X="0" Y="0" />
+								</PolyLine>
+								<PolyLine LineColor="#FF000000">
+									<Point X="0" Y="0" />
+									<Point X="292.5" Y="0" />
+								</PolyLine>
+								<PolyLine LineColor="#FF000000">
+									<Point X="292.5" Y="0" />
+									<Point X="292.5" Y="633" />
+								</PolyLine>
+								<PolyLine LineColor="#FF000000">
+									<Point X="292.5" Y="633" />
+									<Point X="0" Y="633" />
+								</PolyLine>
+							</PathFigure>
+						</Path>
+					</Clip>
+					<Path FillMode="Alternate" RenderTransform="1 0 0 -1 0 633">
+						<Pen Alignment="Center" DashCap="Flat" DashOffset="0" DashStyle="Solid" EndCap="Flat" LineJoin="Miter" MiterLimit="10" StartCap="Flat" Width="0.75">
+							<Brush>
+								<SolidBrush Color="#00FFFFFF" />
+							</Brush>
+						</Pen>
+						<PathFigure IsClosed="True">
+							<PolyLine LineColor="#FF000000">
+								<Point X="-188.79675" Y="726.83923" />
+								<Point X="-188.79675" Y="726.83923" />
+							</PolyLine>
+							<PolyLine LineColor="#FF000000">
+								<Point X="-188.79675" Y="726.83923" />
+								<Point X="468.19632" Y="720.46765" />
+							</PolyLine>
+							<PolyLine LineColor="#FF000000">
+								<Point X="468.19632" Y="720.46765" />
+								<Point X="458.6856" Y="-260.21625" />
+							</PolyLine>
+							<PolyLine LineColor="#FF000000">
+								<Point X="458.6856" Y="-260.21625" />
+								<Point X="-198.3075" Y="-253.84467" />
+							</PolyLine>
+						</PathFigure>
+					</Path>
+				</Canvas>
+			</Canvas>
+		</Page>
+	</Group>
+</Aps>
